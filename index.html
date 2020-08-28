@@ -6,39 +6,42 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="row">
-        <form id="form" action="">
+    <span class="btn" onclick="openModal()">Открыть форму</span>
+        
+    <div class="form" onclick="closeModal()">
+        <form id="form" name="form" action="" onclick="event.stopPropagation()">
             <h1 class="form__title">Обратная связь</h1>
             <div class="form__info">
                 <div class="form__group">
-                    <label for="" class="form__label">Имя</label>
-                    <input type="text" class="form__input">
-                    <label for="" class="form__status"></label>
+                    <input name="form__name" data-rule="name" type="text" class="form__input" placeholder="Имя">
+                    <label data-title="name" class="form__label">Имя</label>
+                    <label data-status="name" class="form__status"></label>
                 </div>
                 <div class="form__group">
-                    <label for="" class="form__label">Телефон</label>
-                    <input type="text" class="form__input">
-                    <label for="" class="form__status"></label>
+                    <input data-rule="phone" type="text" class="form__input" placeholder="Телефон"> 
+                    <label data-title="phone" class="form__label">Телефон</label>
+                    <label data-status="phone" class="form__status"></label>
                 </div>
                 <div class="form__group">
-                    <label for="" class="form__label">Эл. почта</label>
-                    <input type="text" class="form__input">
-                    <label for="" class="form__status"></label>
+                    <input data-rule="mail" type="text" class="form__input" placeholder="Эл. почта">
+                    <label data-title="mail" class="form__label">Эл. почта</label>
+                    <label data-status="mail" class="form__status"></label>
                 </div>
             </div>
             <div class="form__message">
-                <label for="" class="form__label">Сообщение</label>
-                <textarea class="form__textarea"></textarea>
-                <label for="" class="form__status"></label>
+                <textarea data-rule="message" class="form__textarea" placeholder="Сообщение"></textarea>
+                <label data-title="message" class="form__label">Сообщение</label>
+                <label data-status="message" class="form__status"></label>
             </div>
             <div class="form__license">Отправляя форму вы соглашаетесь 
                 с <a href="">пользовательским соглашением</a> 
                 и <a href="">политикой конфиденциальности</a>
             </div>
-            <span class="form__btn">Отправить</span>      
+            <button type="submit" id="btn" class="form__btn">Отправить</span>      
         </form>
     </div>
+        
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

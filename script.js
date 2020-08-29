@@ -95,25 +95,9 @@ for (let input of inputs) {
     })
 };
 
-document.forms.form.onsubmit = (e) => {
+function send() {
     if (name && (phone || mail) && message) {
-        console.log('start');
-        e.preventDefault();
-
-        let xhr = new XMLHttpRequest();
-        name = encodeURIComponent(name);
-
-        xhr.open('POST', 'form.php');
-        xhr.setRequestHeader('Content-Type',
-        'application/x-www-form-urlencoded');
-
-        xhr.onreadystatechange = () => {
-            console.log(xhr.readyState, xhr.status);
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log(xhr.responseText);
-            }
-        }
-
-        xhr.send('name = '+ name);
+       alert(`Hi ${name}, ${ phone ? 'phone: ' + phone + ', ' : ''}` + 
+       `${ mail ? 'mail: ' + mail + ', ' : ''}message: ${message}`);        
     }
-};
+}

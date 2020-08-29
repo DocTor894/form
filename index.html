@@ -10,10 +10,10 @@
         
     <div class="form" onclick="closeModal()">
         <form id="form" name="form" action="" onclick="event.stopPropagation()">
-            <h1 class="form__title">Обратная связь</h1>
+            <h2 class="form__title">Обратная связь</h2>
             <div class="form__info">
                 <div class="form__group">
-                    <input name="form__name" data-rule="name" type="text" class="form__input" placeholder="Имя">
+                    <input data-rule="name" type="text" class="form__input" placeholder="Имя">
                     <label data-title="name" class="form__label">Имя</label>
                     <label data-status="name" class="form__status"></label>
                 </div>
@@ -37,7 +37,7 @@
                 с <a href="">пользовательским соглашением</a> 
                 и <a href="">политикой конфиденциальности</a>
             </div>
-            <button type="submit" id="btn" class="form__btn">Отправить</span>      
+            <span id="btn" class="form__btn" onclick="send()">Отправить</span>      
         </form>
     </div>
         
